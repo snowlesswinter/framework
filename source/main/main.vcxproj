@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E37F5194-34DA-45D1-8C5B-C07969DEF4C0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>main</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;../third_party/chromium;../third_party/chromium/third_party/skia/include/config;../third_party/chromium/third_party/icu/public/i18n;../third_party/chromium/third_party/icu/public/common;../third_party/chromium/third_party/skia/include/core;$(OutDir)obj/global_intermediate/ui/ui_resources</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dbghelp.lib;psapi.lib;usp10.lib;msimg32.lib;oleacc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;../third_party/chromium;../third_party/chromium/third_party/skia/include/config;../third_party/chromium/third_party/icu/public/i18n;../third_party/chromium/third_party/icu/public/common;../third_party/chromium/third_party/skia/include/core;$(OutDir)obj/global_intermediate/ui/ui_resources</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>dbghelp.lib;psapi.lib;usp10.lib;msimg32.lib;oleacc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bubble_example.cc" />
+    <ClCompile Include="button_example.cc" />
+    <ClCompile Include="combobox_example.cc" />
+    <ClCompile Include="double_split_view_example.cc" />
+    <ClCompile Include="example_base.cc" />
+    <ClCompile Include="example_combobox_model.cc" />
+    <ClCompile Include="link_example.cc" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu_example.cc" />
+    <ClCompile Include="message_box_example.cc" />
+    <ClCompile Include="native_theme_button_example.cc" />
+    <ClCompile Include="native_theme_checkbox_example.cc" />
+    <ClCompile Include="native_widget_views_example.cc" />
+    <ClCompile Include="radio_button_example.cc" />
+    <ClCompile Include="scroll_view_example.cc" />
+    <ClCompile Include="single_split_view_example.cc" />
+    <ClCompile Include="tabbed_pane_example.cc" />
+    <ClCompile Include="table2_example.cc" />
+    <ClCompile Include="table_example.cc" />
+    <ClCompile Include="textfield_example.cc" />
+    <ClCompile Include="text_example.cc" />
+    <ClCompile Include="throbber_example.cc" />
+    <ClCompile Include="widget_example.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\third_party\chromium\base\base.vcxproj">
+      <Project>{ed99d404-f6b3-517a-4ea7-604a10269355}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\base\base_i18n.vcxproj">
+      <Project>{7a0b983d-22d4-d091-b285-e84dfbe961c4}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\base\base_static.vcxproj">
+      <Project>{ff406463-e0ef-c1b2-c0b8-072e8ee1c97f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\base\third_party\dynamic_annotations\dynamic_annotations.vcxproj">
+      <Project>{b68ee2bd-0ba9-9949-464b-39ffe5cabd0a}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\build\temp_gyp\googleurl.vcxproj">
+      <Project>{feddd57a-3998-ff67-2a96-22b81e2fa896}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\skia\skia.vcxproj">
+      <Project>{2bc38797-aee3-4283-32a2-4c72b93a8ebb}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\skia\skia_opts.vcxproj">
+      <Project>{34e18aa2-8a49-90ae-dec1-e1426b16c976}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\third_party\icu\icui18n.vcxproj">
+      <Project>{513a02d2-bdcf-3924-3ecb-a5e20dc44aaf}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\third_party\icu\icuuc.vcxproj">
+      <Project>{6d7bcaa8-d240-88d9-b5a3-979c8a69c9b4}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\third_party\libpng\libpng.vcxproj">
+      <Project>{a3dfec80-7e9b-7d05-1866-0e08b191b9d8}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\third_party\zlib\zlib.vcxproj">
+      <Project>{57997958-0cdb-a2a6-b81a-c5cadfc6e484}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\ui\gfx\compositor\compositor.vcxproj">
+      <Project>{4153d125-92ab-e2b3-e048-d0665a1e6abe}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\ui\ui.vcxproj">
+      <Project>{bb1b1d62-407d-6fc4-1cb9-26f0c1394c87}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\third_party\chromium\views\views.vcxproj">
+      <Project>{be156a28-53aa-9979-412e-23609c67fbeb}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bubble_example.h" />
+    <ClInclude Include="button_example.h" />
+    <ClInclude Include="combobox_example.h" />
+    <ClInclude Include="double_split_view_example.h" />
+    <ClInclude Include="example_base.h" />
+    <ClInclude Include="example_combobox_model.h" />
+    <ClInclude Include="link_example.h" />
+    <ClInclude Include="menu_example.h" />
+    <ClInclude Include="message_box_example.h" />
+    <ClInclude Include="my_views_delegate.h" />
+    <ClInclude Include="my_widget_delegate.h" />
+    <ClInclude Include="native_theme_button_example.h" />
+    <ClInclude Include="native_theme_checkbox_example.h" />
+    <ClInclude Include="native_widget_views_example.h" />
+    <ClInclude Include="radio_button_example.h" />
+    <ClInclude Include="scroll_view_example.h" />
+    <ClInclude Include="single_split_view_example.h" />
+    <ClInclude Include="tabbed_pane_example.h" />
+    <ClInclude Include="table2_example.h" />
+    <ClInclude Include="table_example.h" />
+    <ClInclude Include="textfield_example.h" />
+    <ClInclude Include="text_example.h" />
+    <ClInclude Include="throbber_example.h" />
+    <ClInclude Include="widget_example.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Debug\obj\global_intermediate\ui\ui_resources\ui_resources.rc" />
+    <ResourceCompile Include="..\..\Debug\obj\global_intermediate\ui\ui_resources_standard\ui_resources_standard.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

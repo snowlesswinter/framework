@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="example_combobox_model.cc" />
+    <ClCompile Include="link_example.cc" />
+    <ClCompile Include="menu_example.cc" />
+    <ClCompile Include="message_box_example.cc" />
+    <ClCompile Include="native_theme_button_example.cc" />
+    <ClCompile Include="native_theme_checkbox_example.cc" />
+    <ClCompile Include="native_widget_views_example.cc" />
+    <ClCompile Include="radio_button_example.cc" />
+    <ClCompile Include="scroll_view_example.cc" />
+    <ClCompile Include="single_split_view_example.cc" />
+    <ClCompile Include="tabbed_pane_example.cc" />
+    <ClCompile Include="table_example.cc" />
+    <ClCompile Include="table2_example.cc" />
+    <ClCompile Include="text_example.cc" />
+    <ClCompile Include="textfield_example.cc" />
+    <ClCompile Include="throbber_example.cc" />
+    <ClCompile Include="widget_example.cc" />
+    <ClCompile Include="bubble_example.cc" />
+    <ClCompile Include="button_example.cc" />
+    <ClCompile Include="combobox_example.cc" />
+    <ClCompile Include="double_split_view_example.cc" />
+    <ClCompile Include="example_base.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bubble_example.h" />
+    <ClInclude Include="button_example.h" />
+    <ClInclude Include="combobox_example.h" />
+    <ClInclude Include="double_split_view_example.h" />
+    <ClInclude Include="example_base.h" />
+    <ClInclude Include="example_combobox_model.h" />
+    <ClInclude Include="link_example.h" />
+    <ClInclude Include="menu_example.h" />
+    <ClInclude Include="message_box_example.h" />
+    <ClInclude Include="native_theme_button_example.h" />
+    <ClInclude Include="native_theme_checkbox_example.h" />
+    <ClInclude Include="native_widget_views_example.h" />
+    <ClInclude Include="radio_button_example.h" />
+    <ClInclude Include="scroll_view_example.h" />
+    <ClInclude Include="single_split_view_example.h" />
+    <ClInclude Include="tabbed_pane_example.h" />
+    <ClInclude Include="table_example.h" />
+    <ClInclude Include="table2_example.h" />
+    <ClInclude Include="text_example.h" />
+    <ClInclude Include="textfield_example.h" />
+    <ClInclude Include="throbber_example.h" />
+    <ClInclude Include="widget_example.h" />
+    <ClInclude Include="my_views_delegate.h" />
+    <ClInclude Include="my_widget_delegate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{3e1f8c17-6f83-42a4-91e6-16c220453463}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Debug\obj\global_intermediate\ui\ui_resources\ui_resources.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="..\..\Debug\obj\global_intermediate\ui\ui_resources_standard\ui_resources_standard.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
